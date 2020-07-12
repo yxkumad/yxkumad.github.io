@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>prprCloud</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Rapid - v2.2.0
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+  {if $malio_config['enable_crisp'] == true && $malio_config['enable_crisp_outside'] == true}
+  {include file='crisp.tpl'}
+  {/if}
+  {if $malio_config['enable_chatra'] == true && $malio_config['enable_crisp_outside'] == true}
+  {include file='chatra.tpl'}
+  {/if}  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">prprCloud</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="main-nav d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">首页</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#services">服务</a></li>
+          <li><a href="#pricing">价格</a></li>
+          <li><a href="#faq">常见问题</a></li>
+		  {if $user->isLogin}
+          <li><a href="https://console.prprcloud.co/user">用户中心</a></li>
+		  {else}
+		  <li><a href="https://console.prprcloud.co/auth/register">注册</a></li>
+		  {/if}
+        </ul>
+      </nav><!-- .main-nav-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>全球垃圾网络中继<br>体验 <span>云减速</span> 的魅力</h2>
+		  <h4>通过我们的网络访问内容提供商、公司网络和公共云服务。</h4>
+          <div>
+           {if $user->isLogin}
+           <a href="https://console.prprcloud.co/user" class="btn-get-started scrollto">用户中心</a>
+		   {else}
+		   <a href="https://console.prprcloud.co/auth/register" class="btn-get-started scrollto">开始使用</a>{/if}
+		   </div>{if $user->isLogin}{else}<a href="https://console.prprcloud.co/auth/login">已经是会员？点击登录</a>{/if}
+           
+		  
+        </div>
+
+        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/intro-img.svg" alt="" class="img-fluid">
+        </div>
+		
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/about-img.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+              <h2>关于我们</h2>
+              prprCloud 运营全球网络动态中继服务，旨在为用户提供高速稳定的网络中继服务。我们通过各个基础运营商及各大云服务商的合作，基于强大的硬件实力，通过我们与上百个应用程序对接，客户在访问各个网站与服务时，享受到更快速、更稳定的连接。</p>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> 超过 9 成中转节点，大幅提升用户体验，尤其使用中国电信和中国移动宽带或行动网络的用户</li>
+                <li><i class="ion-android-checkmark-circle"></i> 百分之九十九的在线率给您带来快捷稳定的使用体验</li>
+                <li><i class="ion-android-checkmark-circle"></i> 全球总带宽数超过 20Gbps，不怕拥堵</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>服务</h3>
+          <p>可靠的基础设施，保证您的优质使用体验</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">高速稳定</a></h4>
+              <p class="description">我们精挑细选的线路，让您与世界的距离从来没有如此之近</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">多应用兼容</a></h4>
+              <p class="description">我们的服务适用于 macOS、iOS、Android、Windows 和 Linux</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">便携设置</a></h4>
+              <p class="description">我们精心进行了各种软件的一键配置，教程等</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">网速优秀</a></h4>
+              <p class="description">我们配置了多台大带宽国内中继，让您与世界的速度从来没有如此之快</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"">
+        <div class=" box">
+            <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+            <h4 class="title"><a href="">全球互联</a></h4>
+            <p class="description">我们的服务器覆盖世界主流的地域，通过我们服务连接至全球内容提供商，更加快速</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="box">
+            <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+            <h4 class="title"><a href="">省时省力</a></h4>
+            <p class="description">相比自托管服务可节省大量时间和成本</p>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>为什么选择 prprCloud</h3>
+          <p>不仅仅如此，亦包含以下诸多特性</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="why-us-img">
+              <img src="assets/img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="100">
+                <h4>网络加速</h4>
+                <p>国外常用网站加速 (Google/Youtube/Twitter/Instgram/Github等)</p>
+              </div>
+
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="200">
+                <h4>不可逆加密</h4>
+                <p>在传输过程中使用最强的加密方式，保护用户数据和隐私</p>
+              </div>
+
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
+                <h4>全球各地接入点</h4>
+                <p>访问我们在中国的网络，并进入我们的全球各地的接入点</p>
+              </div>
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
+                <h4>节省时间和金钱</h4>
+                <p>免去繁琐的自托管手续和自托管成本，可节省大量费用和时间</p>
+              </div>
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
+                <h4>价格优惠</h4>
+                <p>出色的体验，意想不到的价格</p>
+              </div>			  
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-6 text-center">
+		    <br>超过</br>
+            <span data-toggle="counter-up">50</span>
+            <p>全球接入点</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <br>超过</br>
+			<span data-toggle="counter-up">5</span>
+            <p>国内接入点</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <br>超过</br>
+			<span data-toggle="counter-up">5000</span>
+            <p>已注册用户</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <br>超过</br>
+			<span data-toggle="counter-up">99</span>
+            <p>在线时间</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row feature-item">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" data-aos="fade-left" data-aos-delay="150">
+            <h4>在阁下心爱的电子设备中使用，无论是手机平板还是电脑，随时可见</h4>
+            <p>随时在阁下的任何设备上访问我们的网络。 我们的服务适用于 macOS、iOS、Android、Windows 和 Linux，借助第三方客户端，可在手机、电脑、路由器、游戏机、电视盒子中使用。</p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="150">
+            <h4>解锁流媒体，观赏和聆听优质的内容</h4>
+            <p>使用我们的网络支持多种的流媒体内容，无论是 Apple Music、Netflix、Hulu、HBO 等等，甚至阁下的精神需求，我们同样考虑。</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>用户评价</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="owl-carousel testimonials-carousel">
+
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <h3>某一沙雕网友</h3>
+                <h4>家里蹲大学的学生</h4>
+                <p>
+                  我的妈我跟你说真的好用到飞起，我的妈我跟你说真的好用到飞起，我的妈我跟你说真的好用到飞起。素质三连。
+                </p>
+              </div>
+
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+                <h3>CXK</h3>
+                <h4>XX公司的唱跳练习生</h4>
+                <p>
+                  大家好，我是练习时长两年半的个人练习生，喜欢唱、跳、rap、篮球
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>常委说你还不会武功</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  群主女装吗？不女装马上换别家
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>常委说你还不会武功</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  能白嫖吗？不能嫖我他妈来这个群干嘛
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>常委说你还不会武功</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  要钱的？这就退群
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>常委说你还不会武功</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  连最基础的服务都没有 不敢买了
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>常委说你还不会武功</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  我刚在这里买了入门版 是不是该给个圈X下载账号
+                </p>
+              </div>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+                <h3>Gavin_Tan</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  prpr就是个辣鸡！
+                </p>
+              </div>              
+              <div class="testimonial-item">
+                <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+                <h3>Gavin_Tan</h3>
+                <h4>沙雕网友</h4>
+                <p>
+                  什么垃圾prpr
+                </p>
+              </div>  
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>我们的合作伙伴</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="assets/img/isp/isp-1.png" alt="">
+          <img src="assets/img/isp/isp-2.png" alt="">
+          <img src="assets/img/isp/isp-3.png" alt="">
+          <img src="assets/img/isp/isp-4.png" alt="">
+          <img src="assets/img/isp/isp-5.png" alt="">
+          <img src="assets/img/isp/isp-6.png" alt="">
+          <img src="assets/img/isp/isp-7.png" alt="">
+          <img src="assets/img/isp/isp-8.png" alt="">
+		  <img src="assets/img/isp/isp-9.png" alt="">
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg wow fadeInUp">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>价格</h3>
+          <p>立刻开启全球网络中继服务，在任何时间任何地点访问全球互联网。</p>
+        </header>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+
+          <!-- Basic Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">¥</span>8.7<span class="period">/30天</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  初级套餐 - 月付
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">20GB 峰值双向流量</li>
+                  <li class="list-group-item">2个在线客户端</li>
+                  <li class="list-group-item">初级中转节点</li>
+                  <li class="list-group-item">不保证稳定性</li>
+				  <li class="list-group-item">无速率限制</li>
+                </ul>
+                <a href="https://console.prprcloud.co/user/shop" class="btn">立刻购买</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regular Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">¥</span>18<span class="period">/30天</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  中级套餐 - 月付
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">200GB 峰值双向流量</li>
+                  <li class="list-group-item">3个在线客户端</li>
+                  <li class="list-group-item">初级、中级中转节点</li>
+                  <li class="list-group-item">非敏感期保证稳定性</li>
+				  <li class="list-group-item">无速率限制</li>
+                </ul>
+                <a href="https://console.prprcloud.co/user/shop" class="btn">立刻购买</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">¥</span>23<span class="period">/30天</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  高级套餐 - 月付
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">370GB 峰值双向流量</li>
+                  <li class="list-group-item">5个在线客户端</li>
+                  <li class="list-group-item">初级、中级、高级中转节点</li>
+                  <li class="list-group-item">敏感期保证稳定性</li>
+				  <li class="list-group-item">无速率限制</li>
+                </ul>
+                <a href="https://console.prprcloud.co/user/shop" class="btn">立刻购买</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3>常见问题</h3>
+          <p>基本售前购买疑问</p>
+        </header>
+
+        <ul id="faq-list" data-aos="fade-up" data-aos-delay="100">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">我是个小白，我购买了之后，该如何使用？ <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+     我们提供详细的在线文档，图文并茂，每个小白都能轻易看懂！
+     			</p>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">我怎么联系你们？ <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                在我们的网站有工单系统，处理问题。同时我们提供在线客服及 Telegram 客户群，在线客服可以点击右下角，<a href="https://t.me/prprcloud">点击进入Telegram 群</a>
+				</p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">你们支持什么软件？ <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                我们支持 Clash、Shadowrocket、Quantumult X 等市面常见第三方软件！
+			  </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">有优惠吗？ <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                有的，你可以用优惠价季付、半年付或年付套餐！
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+  </main><!-- End #main -->
+{if $user->isLogin}
+{else}
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container" data-aos="zoom-out">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">立刻开始使用</h3>
+            <p class="cta-text"> 开始使用优秀的全球网络中继服务</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://console.prprcloud.co/auth/register">点击注册</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!--  End Call To Action Section -->
+{/if}
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+              <div class="col-sm-6">
+
+                <div class="footer-info">
+                  <h3>prprCloud</h3>
+                  <p>prprCloud 为一家网络加速运营商，自 2020年4月创立起来，一直致力于提供优质的网络加速服务</p>
+                </div>
+
+              </div>
+
+              <div class="col-sm-6">
+                <div class="footer-links">
+                  <h4>链接</h4>
+                  <ul>
+		  <li><a href="#">首页</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#services">服务</a></li>
+          <li><a href="#pricing">价格</a></li>
+          <li><a href="#faq">常见问题</a></li>
+                  </ul>
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+
+                <div class="footer-links">
+                  <h4>联系我们</h4>
+                  <p>
+                    <strong>Telegram 群组：</strong> <a href="https://t.me/prprcloud">@prprcloud</a><br>
+                    <strong>Telegram 频道：</strong> <a href="https://t.me/prprclouds">@prprclouds</a><br>
+                  </p>
+                </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; 2020 <strong>prprCloud</strong>
+      </div>
+     <!-- <div class="credits">
+        
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+    
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>  -->
+    </div>
+  </footer><!-- End  Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main2.js"></script>
+
+</body>
+
+</html>
